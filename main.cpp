@@ -1,4 +1,5 @@
 #include <iostream>
+#include "node.h"
 
 using namespace std;
 
@@ -11,11 +12,19 @@ void menu() {
       //char* str="7/4*((a+b)*a)+3";
       //char* str="7/4*((a+-+--b)*a)+3";
       //char* str="2+(3)";
-      char* str="7/4*((a+b)^4*a)+3";
+      char str[] = "7/4*((a+b)^4*a)+3";
 }
 
 int main(int argc, char const *argv[]) {
-    menu();
+    ios::sync_with_stdio(false),
+    cin.tie(nullptr);
+            menu();
+            string equat;
+            cin >> equat;
+
+    Node Minerva(equat);
+    Minerva.findPriority();
+    cout << Minerva.operate();
 
     cout << "\nPress enter to continue ..."; 
     cin.get(); 
