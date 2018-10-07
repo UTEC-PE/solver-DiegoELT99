@@ -90,6 +90,8 @@ struct Node
             findPriority();
         }
 
+        // Aquí que retornas? Te da warning
+
     }
 
     double operate()
